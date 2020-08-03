@@ -27,7 +27,7 @@ function update_linechart(udate, umonth, uyear){
         const yValue = d => d.USAGE_KWH;
 
         var formatMonth = d3.timeFormat("%B"),
-        mydate = new Date(uyear, umonth-1, udate);
+        mydate = new Date(uyear, umonth, udate);
         current_date = udate + ' ' + formatMonth(mydate) + ', ' + uyear;
 
         d3.select('#chartlabel').remove();
@@ -90,4 +90,4 @@ function update_linechart(udate, umonth, uyear){
             .attr('stroke-dashoffset', 0);
     });
 }
-update_linechart(1,1,2019);
+update_linechart(1,0,2019);

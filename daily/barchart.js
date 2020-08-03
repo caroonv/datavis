@@ -127,7 +127,7 @@ function update_chart(month, year) {
 
             function update_chart(){
                 var d = d3.select(this).data()[0]
-                update_linechart(d.USAGE_DATE.getDate(), d.USAGE_DATE.getMonth()+1, d.USAGE_DATE.getFullYear());
+                update_linechart(d.USAGE_DATE.getDate(), d.USAGE_DATE.getMonth(), d.USAGE_DATE.getFullYear());
             }
 
         }); //d3.csv
