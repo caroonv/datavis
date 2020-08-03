@@ -101,18 +101,4 @@ function(data) {
             .attr('x', 0)
             .attr('y', function(d,i) {return (i*11);})
             .text(d => d);
-
-    // g_s.selectAll('mytext')
-    //     .data(data)
-    //     .enter()
-    //     .append('text')
-    //     .filter(d => d.Year == '2020')
-    //         .attr('id', 'chartlabel')
-    //         .attr('x', d => xScale(xValue(d)) + xScale.bandwidth() / 2)
-    //         .attr('y', d => yScale(yValue(d)) - 200)
-    //         .style('text-anchor', 'middle')
-    //         .style('fill', '#69b3a2')
-    //         // .attr('stroke', 'black') '#69b3a2'
-    //         .text(strChartText);
-
 });
