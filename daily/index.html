@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Daily Totals</title>
+        <link rel='stylesheet' href='styles.css'>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css'>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
+      </head>
+    <script src='https://d3js.org/d3.v4.min.js'></script>
+    <body>
+        <div class='container-fluid'>
+            <h1 class='text-center'>Daily Usage Patterns</h1>
+            <p>If you scroll over the individual bars a <b>Tooltip</b> will display total daily usage of energy for that particular day. Selecting a month or year from the dropdowns the chart on the left will display daily totals for that particular month. Clicking on a bar in the chart on the left will display daily usage for that particular day in 15 minute intervals as a line chart on the right. The linechart redraws the usage pattern for each day. <br/><b>Note: Daily data is only available from Aug 2018 to June 2020.</b></p>
+            <div class='row'>
+                <div class='col-lg-2'>
+                    <select class='form-control' id='months' onchange='getSelectedValues();'>
+                        <option selected='selected' value='0'>January</option>
+                        <option value='01'>Febuary</option>
+                        <option value='02'>March</option>
+                        <option value='03'>April</option>
+                        <option value='04'>May</option>
+                        <option value='05'>June</option>
+                        <option value='06'>July</option>
+                        <option value='07'>August</option>
+                        <option value='08'>September</option>
+                        <option value='09'>October</option>
+                        <option value='10'>November</option>
+                        <option value='11'>December</option>
+                    </select>
+                </div>
+                <div class='col-lg-2'>
+                    <select class='form-control' id='years' onchange='getSelectedValues();'>
+                        <option value='2018'>2018</option>
+                        <option selected='selected' value='2019'>2019</option>
+                        <option value='2020'>2020</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class='row'>
+                <div id='container' class='col-lg-6'>
+                    <svg id='barchartsvg' width=750 height=750></svg>
+                </div>
+                <div class='col-lg-6'>
+                    <svg id='linechartsvg' width=750 height=750></svg>
+                </div>
+            </div>
+        </div>
+        <script src='barchart.js'></script>
+        <script src='linechart.js'></script>
+
+        <nav aria-label='breadcrumb'>
+            <ol class='breadcrumb primary-color'>
+                <li class='breadcrumb-item'><a class='white-text' href='/datavis/index.html'>Summary</a></li>
+                <li class='breadcrumb-item'><a class='white-text' href='/datavis/annually/index.html'>Years</a></li>
+                <li class='breadcrumb-item'><a class='white-text' href='/datavis/monthly/index.html'>Months</a></li>
+                <li class='breadcrumb-item active'>Days</li>
+            </ol>
+        </nav>
+
+    </body>
+</html>

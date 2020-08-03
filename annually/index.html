@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Monthly Energy Usage</title>
+        <link rel='stylesheet' href='styles.css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <script src='https://d3js.org/d3.v4.min.js'></script>
+    <body>
+        <div class='container-fluid'>
+            <h1 class='text-center'>Usage by Year</h1>
+            <p>This page gives a high level picture of usage across years. Select a year from the dropdown and the bar chart refreshes to show information for that particular year. The chart on the right shows trends for past three years. Each line representing one year. </p>
+            <div class='row'>
+                <div class='col-lg-1'>
+                    <label for="year">Select Year:</label>
+                </div>
+                <div class='col-lg-1'>
+                    <select class='form-control' id='years' onchange='getSelectedYear();'>
+                        <option selected='selected' value='2018'>2018</option>
+                        <option value='2019'>2019</option>
+                        <option value='2020'>2020</option>
+                    </select>
+                </div>
+            </div>
+            <div class='row'>
+                <div id='container' class='col-lg-6'>
+                    <svg id='yearsvg' width=750 height=750></svg>
+                </div>
+                <div class='col-lg-6'>
+                    <svg id='linesvg' width=750 height=750></svg>
+                </div>
+            </div>
+        </div>
+        <script src='index.js'></script>
+        <script src='lines.js'></script>
+        <nav aria-label='breadcrumb'>
+            <ol class='breadcrumb primary-color'>
+                <li class='breadcrumb-item'><a class='white-text' href='/datavis/index.html'>Summary</a></li>
+                <li class='breadcrumb-item active'>Years</a></li>
+                <li class='breadcrumb-item'><a class='white-text' href='/datavis/monthly/index.html'>Months</a></li>
+                <li class='breadcrumb-item'><a class='white-text' href='/datavis/daily/index.html'>Days</li>
+            </ol>
+        </nav>
+    </body>
+</html>

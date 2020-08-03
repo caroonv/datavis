@@ -1,0 +1,52 @@
+.datarect {
+    fill: #FF7F50;
+    opacity: .3;
+}
+
+text {
+    font-family: sans-serif;
+}
+
+.tick text {
+    font-size: 1em;
+    fill: #635F5D;
+}
+
+.tick line {
+    stroke: #C0C0BB;
+}
+
+.axis-label {
+    font-size: 1em;
+    fill: #8E8883;
+}
+
+.total {
+    font-size: .75em;
+    fill: #8E8883;
+}
+
+.title {
+    font-size: 1.2em;
+    fill: #635F5D;
+}
+
+.chartlabel {
+    font-size: .9em;
+    fill: #8E8883;
+}
+
+.mytooltip{
+  position      : absolute;
+  text-align    : center;
+  max-width     : 200px;
+  max-height    : 50px;
+  padding       : 8px;
+  border        : none;
+  border-radius : 8px;
+  margin-top    : -30px;
+  font          : 10px sans-serif;
+  background    : black;
+  color         : white;
+  pointer-events: none;
+  }

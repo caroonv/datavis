@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Energy Usage Summary</title>
+        <link rel='stylesheet' href='styles.css'>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css'>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
+    </head>
+    <script src='https://d3js.org/d3.v4.min.js'></script>
+
+    <body>
+        <div class='container-fluid'>
+            <h1 class='text-center'>Electricity Usage Analysis</h1>
+            <p>I have been planning on getting solar panels and wanted to analyze my energy consumption to aid in my decision making process. If you are in the state of Texas in United States you can go to <a href='https://www.smartmetertexas.com'>Smart Meter Texas</a> and register for a free account. You can download your usage data and track usage as granular as at 15-minute intervals. Data for all the months in past two years: 2018, 2019 is available for download and for current year 2020, upto June. The bar chart on the left shows total usage per year and chart on the right shows usage for each month in past three years for side by side comparision. <br/><br/><b>Tooltips</b> are enabled by hovering over the bar charts.</p>
+            <div class='row'>
+                <div id='container' class='col-lg-6'>
+                    <svg id='summarysvg' width=600 height=600></svg>
+                </div>
+                <div id ='container' class='col-lg-6'>
+                    <svg id='stackedsvg' width=600 height=600></svg>
+                </div>
+            </div>
+        </div>
+        <script src='summary.js'></script>
+        <script src='index.js'></script>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb primary-color">
+                <li class="breadcrumb-item active">Summary</li>
+                <li class="breadcrumb-item"><a class="white-text" href='/datavis/annually/index.html'>Years</a></li>
+                <li class="breadcrumb-item"><a class="white-text" href='/datavis/monthly/index.html'>Months</a></li>
+                <li class="breadcrumb-item"><a class="white-text" href='/datavis/daily/index.html'>Days</a></li>
+            </ol>
+        </nav>
+    </body>
+</html>
